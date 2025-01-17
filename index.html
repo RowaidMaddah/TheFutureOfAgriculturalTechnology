@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart station website with real-time weather monitoring.">
+  <title>Smart Weather Station</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Smart Weather Station</h1>
+    <h2>The Future of Agriculture with Real-Time Monitoring</h2>
+  </header>
+  <main>
+    <section id="about-us">
+        <div class="container1">
+            <h1>About Us</h1>
+            <p>Welcome to our website, our goal is to further utilise technology to improve the quality of products by notifying farmers of the latest weather and 'tech' advancements in the agricultural community!</p>
+        </div>
+    </section>
+    <h2>
+      <strong>Location: Riyadh, KSA </strong>
+    </h2>
+    <section class="overview">
+      <div class="card">
+        <h3>Temperature ☀️</h3>
+        <p id="temperature"></p>
+      </div>
+      <div class="card">
+        <h3>Humidity 💦</h3>
+        <p id="humidity"></p>
+      </div>
+      <div class="card">
+        <h3>Pressure 🌡️</h3>
+        <p id="pressure"></p>
+      </div>
+     
+      <div class="card">
+        <h3>Weather Condition 🗿</h3>
+        <p id="weatherCondition"></p>
+      </div>
+    </section>
+      <section class="charts">
+        <h2>Weather Trends</h2>
+        <canvas id="windSpeedChart"></canvas>
+        <canvas id="cloudCoverChart"></canvas>
+        <canvas id="precipitationChart"></canvas>
+      </section>
+      <section class = "details">
+        <h3>Extra details</h3>
+        <div id="weatherDetails">
+            <ul>
+                <li><strong>Geographic land: </strong>Sandy 🐪</li>
+                <li><strong>Moisture condition: </strong>Dry 🏜️</li>
+                <li><strong>Sunrise Time: </strong> 6:28 AM🌅</li>
+                <li><strong>Sunset Time: </strong>5:07 PM🌇</li>
+            </ul>
+        </div>
+      </section>
+        <section class="plant-selection">
+          <h2>Select a Crop Type 🍉</h2>
+          <select id="plantDropdown" aria-label="Select a crop type">
+            <option value="">-- Choose a crop --</option>
+            <option value="Cactus">Cactus</option>
+            <option value="Corn">Corn</option>
+            <option value="Wheat">Wheat</option>
+            <option value="Carrot">Carrot</option>
+            <option value="Potatoes">Potatoes</option>
+            <option value="Radish">Radish</option>
+            <option value="Onions">Onions</option>
+            <option value="Bamboo">Bamboo</option>
+            <option value="Sugar Cane">SugarCane</option>
+            <option value="Rice">Rice</option>
+            <option value="Basil">Basil</option>
+            <option value="Mint">Mint</option>
+            <option value="Aloe Vera">Aloe Vera</option>
+            <option value="Sunflowers">Sunflowers</option>
+            <option value="Watermelon">Watermelon</option>
+            <option value="Pumpkin">Pumpkin</option>
+            <option value="Poppy">Poppy</option>
+            <option value="Violet">Violet</option>
+            <option value="Jasmine">Jasmine</option>
+            <option value="Cabbage">Cabbage</option>
+          </select>
+        </section>
+        <section class = "soil-selection">
+          <h2>Select a Soil Type 🌱</h2>
+          <select id="soilDropdown" aria-label="Select a soil type">
+            <option value = "">-- Choose a soil type --</option>
+            <option value = "Loam">Loam</option>
+            <option value = "Clay">Clay</option>
+            <option value = "Sandy">Sandy</option>
+            <option value = "Silty">Silty</option>
+            <option value = "Chalk">Chalk</option>
+            <option value = "Peat">Peat</option>
+          </select>
+        </section>
+        <p id= "plantMessage"></p>
+
+        <section class = "trends">
+            <h1>Top Agricultural Trends</h1>
+            <div id = "Sugarcane">
+                <h2>#1 Sugarcane 🍭</h2>
+                <p>Sugarcane is the world's most consumed crop, and is the world's largest agricultural product by volume, it represents 80% of the world's sugar production, which is worth $67 billion! It often reaches 4.6 billion tons of production volume annually, mainly concentrated in Asia and Latin-America, owing to the crop's preference for warm climate.</p>
+                <p><strong>Price: </strong>based on FAO and IGC data, sugarcanes are valued at $130 per ton and sold in the market on average for $140 to $180.</p>
+                <p>Here are the most widely-trending and well-researched genetic modifications for sugarcanes: </p>
+                <ul id="sugarcane">
+                    <li><strong>Sugar Cane Mosaic Virus Resistance (SCMVR)</strong> helps increase resistance to multiple popular diseases found in sugarcanes, it can be done by CRISPR Cas-9 to activate sugarcanes own defence pathways against viral infections. This genetic modification allows you to produce more sugarcane without the death or disposal of infected sugarcanes.</li>
+                    <p></p>
+                    <li><strong>Heat Shock Protein-70 (HSP70)</strong> helps in protein stability during heat-stressful situations (extremely high temperatures), it can be insterted into sugarcanes using Agrobacterium-mediated transformation using rice or soybeans.</li>
+                    <p></p>
+                    <li><strong>Dehydration Responsive Element Binding Protein 1A (DREBP1A)</strong> helps withstanding droughts or other water-heavy situations. This gene can be inserted into sugarcane using Agrobacterium-mediated transformation too; the gene activates pathways that help plants tolerate water stress by maintaining cell hydration.</li>
+                </ul>
+            </div>
+            <div id = "Corn">
+                <h2>#2 Corn 🌽</h2>
+                <p>Corn is the world's second most produced crop, the U.S continues to hold the title for the most corn-producing country, accounting for 40% of the world's corn production, followed by China and Brazil. Cornfields often stretch out to millions of acres, making them the top 1 most versatile crop in history.</p>
+                <p><strong>Price: </strong>based on FAO and IGC data, corn is valued at $143 per ton and sold in the market on average for $240 to $280.</p>
+                <p>Here are the most widely-trending and well-researched genetic modifications for corn: </p>
+                <ul id = "corn">
+                    <li><strong>Bacillus Thuringiensis Resistance (Bt Corn)</strong> helps increase pest-resistance, which lowers cost, improves quality and crop health, while simultaneously creates a better environment for other crops by reducing chemical usages. This gene can be found in Bacillus Thuringiensis bacteria and can be introduced using Agrobacterium-mediated transformation.</li>
+                    <p></p>
+                    <li><strong>Brassinosteroid Insensitive 1 (BRI1)</strong> helps increase biomass production by improving growth and yield efficieny, using a receptor (Brassinosteroid Insensitive 1) involved in regulating plant growth and biomass production. This can be achieved by overexpressing this receptor/gene.</li>
+                    <p></p>
+                    <li><strong>Dehydration Responsive Element Binding Protein 1A (DREBP1A)</strong> helps withstanding droughts or other water-heavy situations. This gene can be inserted into corn using Agrobacterium-mediated transformation too; the gene activates pathways that help plants tolerate water stress by maintaining cell hydration.</li>
+                </ul>
+            </div>
+            <div id = "Wheat">
+                <h2>#3 Wheat 🥖</h2>
+                <p>Wheat is a foundational crop in human history, dating all the way back to the very first agricultural revolutions, even now it is still very popular and trending among the cultivation community. Annually, about 770 million tons of it is produced.</p>
+                <p><strong>Price: </strong>based on FAO and IGC data, sugarcanes are valued at $221 per ton and sold in the market on average for $230 to $280.</p>
+                <p>Here are the most widely-trending and well-researched genetic modifications for wheat: </p>
+                <ul id = "wheat">
+                    <li><strong>Fusarium Head Blight Resistance (Fungal Resistance)</strong> helps resist a major fungal disease found in wheat and other cereals. This gene is typically found in Triticum dicoccoides, which is a type of wheat. You can insert this gene by breeding or by utilising CRISPT to edit in the gene, reducing chemical usages.</li>
+                    <p></p>
+                    <li><strong>Nitrate Transporter 1.1 (NRT1.1)</strong> helps increase nitrogen efficiency by improving the way it takes up nitrogen from it's soil. This helps reduce the need for chemical fertilizers and decreases pollution. Overexpressing this natural gene will result in this.</li>
+                    <p></p>
+                    <li><strong>Ribulose-1,5-bisphosphate carboxylase/oxygenase (Rubisco)</strong> helps improve carbon fixation and enhancing photosynthesis. Enhancing or overexpressing this gene improves the crop all around, leading to faster growth, increased quality, cheaper cost and overall more environmental friendly.</li>
+                    <p></p>
+                </ul>
+            </div>
+            <div id = "Rice">
+                <h2>#4 Rice 🍚</h2>
+                <p>Rice is a dietary staple for more than half of the world's population, concentrated in Asia, with the lead producers being India, China and Indonesia. Annually, about 750 million tons of rice is produced.</p>
+                <p><strong>Price: </strong>based on FAO and IGC data, sugarcanes are valued at $234 per ton and sold in the market on average for $230 to $280.</p>
+                <p>Here are the most widely-trending and well-researched genetic modifications for rice: </p>
+                <ul id = "rice">
+                    <li><strong>Magnaporthe oryzae Resistance (Pi54)</strong> helps resist against the rice-blast disease caused by the fungus Magnaporthe oryzae. Pi54 is naturally found in rice, to enhance it's effect and improve the rice's protection against this disease, overexpress it.</li>
+                    <p></p>
+                    <li><strong>Phosphate Transporter 1 (PHT1)</strong> helps better use Phosphorus from it's soil. This gene is already found in rice and can be overexpressed to improve its phosphorus intake.</li>
+                    <p></p>
+                    <li><strong>Phytoene Synthase (PSY) and Carotene Desaturase (CRTI)</strong> both help increase the production of Provitamin A (Beta-Carotene), PSY genes can be found in Daffodil flowers while CRTI can be found in Erwinia uredovora's, the combination of these 2 genes also creates a golden-like appearance in genes.</li>
+                    <p></p>
+                </ul>
+            </div>
+            <div id = "potatoes">
+                <h2>#5 Potato 🥔</h2>
+                <p>Potatoes are one of the world's most widely grown tuber crops, they can thrive in diverse and various climates. The lead productors are areas such as Russia, India and China. The potato has shaped cuisines around the world and will forever be in the people's hearts.</p>
+                <p><strong>Price: </strong>based on FAO and IGC data, potatoes are valued at $3.50 to $4.50 per ton and sold in the market on average for about $2000, this price variation is due to supply and demand, with potatoes being some of the current most demanded vegetable on the planet.</p>
+                <p>Here are the most widely-trending and well-researched genetic modifications for potatoes: </p>
+                <ul id = "potato">
+                    <li><strong>Asparagine Synthase (Asn1)</strong> reducing it helps prevent Acrylamide formation, the formation of harmful compounds during cooking. This can be done silencing the gene with RNAi.</li>
+                    <p></p>
+                    <li><strong>Cycling DOF Factor 1 (StCDF1)</strong> is the gene involved in dormancy regulation, silencing this gene using RNAi can help prolong dormancy and prevent sprouting, ultimately keeping it's shape for longer periods of time and easens storing.</li>
+                    <p></p>
+                    <li><strong>R genes (Rpi-blb1, Rpi-blb2, Rpi-vnt1)</strong> when introduced using method's like CRISPR gene-editing will resist against the fungus Phytophthora Infestans which causes late blight, and is hazardous for potato-dependent communities.</li>
+                    <p></p>
+                </ul>
+            </div>
+            </section>
+        </section>
+        <div class = "dropdown-container">
+            <h2 class = "title">Are GMO's safe?</h2>
+            <p class = "content">There is a common misconception that GMO's are typically worse for your health, but actually, they prevent ton's of diseases and help us make much better use of our technology and farmlands.</p>
+            <button class="dropdown-button">↓</button>
+        </div>
+        <h1></h1>
+        <h1><strong>Calculator</strong></h1>
+        <h2>Use the notes and calculator below for any needed yield calculations!</h2>
+        <div class = "Calculator">
+          <div class = "calculator">
+            <form>
+              <div class = "display">
+                <input type = "text" name = "display">
+              </div>
+              <div>
+                <input type = "button" value = "AC" onclick = "display.value = '' " class = "yeah">
+                <input type = "button" value = "DE" onclick = "display.value = display.value.toString().slice(0, -1)" class = "yeah">
+                <input type = "button" value = "." onclick = "display.value +='.'" class = "yeah">
+                <input type = "button" value = "/" onclick = "display.value += '/'" class = "yeah">
+              </div>
+              <div>
+                <input type = "button" value = "7" onclick = "display.value += '7'">
+                <input type = "button" value = "8" onclick = "display.value += '8'">
+                <input type = "button" value = "9" onclick = "display.value += '9'">
+                <input type = "button" value = "*" onclick = "display.value += '*'" class = "yeah">
+              </div>
+              <div>
+                <input type = "button" value = "4" onclick = "display.value += '4'">
+                <input type = "button" value = "5" onclick = "display.value += '5'">
+                <input type = "button" value = "6" onclick = "display.value += '6'">
+                <input type = "button" value = "-" onclick = "display.value += '-'" class = "yeah">
+              </div>
+              <div>
+                <input type = "button" value = "1" onclick = "display.value += '1'">
+                <input type = "button" value = "2" onclick = "display.value += '2'">
+                <input type = "button" value = "3" onclick = "display.value += '3'">
+                <input type = "button" value = "+" onclick = "display.value += '+'" class = "yeah">
+              </div>
+              <div>
+                <input type = "button" value = "00" onclick = "display.value += '00'">
+                <input type = "button" value = "0" onclick = "display.value += '0'">
+                <input type = "button" value = "=" onclick  = "display.value = eval(display.value)" class = "equal">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class = "container">
+          <h1>📑 Notes</h1>
+          <button class = "btn">🔨 Create Notes</button>
+          <div class = "notes-container">
+          </div>
+        </div>
+  </main>
+  <footer>
+    <p>Powered by <strong>HTML, CSS, and JavaScript</strong> | Developed by <strong>Rowaid Maddah</strong> Group 3 (10Q)</p>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
