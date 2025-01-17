@@ -1,0 +1,496 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-image: url('https://wallpaperaccess.com/full/1551423.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e5e5e5;
+    overflow-x: hidden;
+  }
+  
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #27a162;
+    color: #e5e5e5;
+  }
+  
+  
+  header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeIn 3.5s ease-in-out;
+  }
+  
+  
+  header h2 {
+    font-size: 1.5em;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  
+  #about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #e5e5e5;
+    text-align: center;
+  }
+  
+  
+  #about-us {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    margin: 40px auto;
+    animation: fadeIn 3s ease-in-outl;
+    text-align: center;
+  }
+  
+  
+  .overview {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    animation: fadeIn 2.5s ease-out;
+  }
+  
+  
+  .card {
+    background: #27a162;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e5e5e5;
+  }
+  
+  
+  .charts {
+    width: 50%;
+    max-width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex;
+  }
+  
+  
+  canvas {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+  }
+  
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #27a162;
+    color: #e5e5e5;
+  }
+  
+  
+  #plantDropdown {
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.1em;
+    width: 250px;
+    margin-top: 10px;
+    background-color: #27a162;
+    color: #e5e5e5;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    animation: fadeIn 3.5s ease-in-out;
+    margin: 20px;
+    }
+   
+  
+    .plant-selection {
+    margin-top: 30px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #27a162;
+    box-shadow: 0 1px 2px rgba(0,0,0,1);
+    animation: fadeIn 2.5s ease-in-out;
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+  
+  
+    .plant-selection:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+   
+  
+    #plantMessage {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e5e5e5;
+    margin: 20px;
+    }
+  
+  
+    #soilDropdown {
+      padding: 10px;
+      text-align: center;
+      border-radius: 12px;
+      font-size: 1.1em;
+      width: 250px;
+      margin-top: 10px;
+      background-color: #27a162;
+      color: #e5e5e5;
+      border: none;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+      animation: fadeIn 3.5s ease-in-out;
+      margin: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+  
+    .soil-selection {
+      margin-top: 30px;
+      border-radius: 12px;
+      text-align: center;
+      background-color: #27a162;
+      box-shadow: 0 1px 2px rgba(0,0,0,1);
+      animation: fadeIn 2.5s ease-in-out;
+      margin: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+  
+   
+  
+  .soil-selection:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+    .details {
+      background-color: #27a162; /* Green background matching the theme */
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow to make it stand out */
+      width: 40%; /* Adjust width to give it space */
+      margin: 20px 0;
+      animation: fadeIn 2.5s ease-in-out;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+   
+   
+    .details-title {
+      font-size: 1.8em; /* Larger font size for the title */
+      color: #e5e5e5;
+      font-weight: bold;
+      margin-bottom: 20px; /* More space below the title */
+      text-align: center; /* Center the title */
+      letter-spacing: 2px; /* Add letter-spacing to make the title feel more polished */
+    }
+   
+  
+    #weatherDetails ul {
+      list-style-type: none; /* Remove default bullet points */
+      padding-left: 0;
+      font-size: 1.1em; /* Slightly larger font for better readability */
+      margin: 0;
+    }
+   
+  
+    #weatherDetails li {
+      margin: 12px 0; /* More space between items */
+      color: #e5e5e5;
+      line-height: 1.6; /* Add line height for better spacing between text */
+    }
+   
+  
+    #weatherDetails li strong {
+      font-weight: bold;
+      color: #e5e5e5;
+    }
+   
+   
+    /* Add some padding and alignment for the whole list */
+    #weatherDetails ul {
+      padding-left: 15px;
+    }
+   
+  
+    .details ul li {
+      text-align: left; /* Align text to the left */
+      padding: 15px; /* Add padding to give a neat look */
+      border: 1px solid;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 10px 0; /* Ensure there is a consistent margin */
+      color: #e5e5e5;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+  
+  
+    .details ul li:hover{
+      transform: translateY(-10px);
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+  
+   
+    /* Responsive styling for smaller screens */
+    @media (max-width: 768px) {
+      .details {
+        width: 80%; /* Adjust width on smaller screens */
+        padding: 15px;
+      }
+   
+  
+      .details-title {
+        font-size: 1.6em; /* Adjust title size */
+      }
+   
+  
+      #weatherDetails ul li {
+        font-size: 1.0em; /* Adjust font size for better readability */
+      }
+    }
+  
+  
+    .trends{
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      max-width: 1200px;
+      margin: 40px auto;
+      animation: fadeIn 3s ease-in-outl;
+      text-align: left;
+    }
+  
+  
+    .trends h1{
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #e5e5e5;
+      text-align: center;
+    }
+  
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  /* Styling for the container */
+  .dropdown-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #27a162;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .title {
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .content {
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .content.show {
+    max-height: 200px;
+    opacity: 1;
+  }
+  
+  .dropdown-button {
+    display: inline-block;
+    background-color: #1f9457;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .dropdown-button:hover {
+    background-color: #1fb96a;
+  }
+  
+  .dropdown-button:focus {
+    outline: none;
+  }
+  
+  
+  .container{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 4%;
+    padding-left: 10%;
+  }
+  
+  .container h1{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  
+  .container h1 img{
+    width: 60px;
+    margin-right: 10px;
+  }
+  
+  .container button img{
+    width: 25px;
+    margin-right: 8px;
+  }
+  
+  .container button{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#1fb96a, #27a162);
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+  }
+  
+  .input-box{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: #1fb96a;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .input-box img{
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+  
+  
+  .Calculator{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .calculator{
+    background: rgb(35, 89, 62);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px #1fb96a, 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+  
+  form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+  }
+  
+  form input.equal{
+    width: 145px;
+    color: #2acd73;
+  }
+  
+  form input.yeah{
+    color: #2acd73;
+  }
+  
