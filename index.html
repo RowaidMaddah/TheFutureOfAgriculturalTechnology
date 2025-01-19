@@ -20,9 +20,19 @@
             <p>Welcome to our website, our goal is to further utilise technology to improve the quality of products by notifying farmers of the latest weather and 'tech' advancements in the agricultural community!</p>
         </div>
     </section>
-    <h2>
-      <strong>Location: Riyadh, KSA </strong>
-    </h2>
+
+    <div class = "hello">
+      <div class = "search">
+        <input type = "text" placeholder = "enter city name..." spellcheck = false>
+        <button><img src = "Downloads/search.png"></button>
+      </div>
+      <div class = "weather">
+
+        <h2 class = "city"></h2>
+      </div>
+    </div>
+
+
     <section class="overview">
       <div class="card">
         <h3>Temperature ☀️</h3>
@@ -49,14 +59,32 @@
         <canvas id="precipitationChart"></canvas>
       </section>
       <section class = "details">
-        <h3>Extra details</h3>
+        <h1>Things to look out for 💀⚡</h1>
         <div id="weatherDetails">
-            <ul>
-                <li><strong>Geographic land: </strong>Sandy 🐪</li>
-                <li><strong>Moisture condition: </strong>Dry 🏜️</li>
-                <li><strong>Sunrise Time: </strong> 6:28 AM🌅</li>
-                <li><strong>Sunset Time: </strong>5:07 PM🌇</li>
-            </ul>
+          <h2>#1 Highly alkaline/acidic soils are very harmful for plants 🍋</h1>
+          <ul>
+            <li>Use a soil pH test kit available at garden centers or online. These kits usually come with a test strip or a vial containing liquid reagents. Follow the instructions provided to obtain the pH reading. Generally, soil pH is measured on a scale from 0 to 14:</li>
+            <li>Although crops tend to differ in preference of acidity levels, typically anything under 7.5 and above 4.5 (between 7.0 and 5.0 is recommended) will keep you on the right path</li>
+            <li>We recommend the Hach pH Test Kit (Hach 2100) for pH testing.</li>
+          </ul>
+
+          <h2>#2 Soils that are too moist 🌊</h2>
+          <ul>
+            <li>They cause the roots of the crop to rot, which prevents nutrient intake of crop by collecting up and blocking pathways.</li>
+            <li>Nutrient leeching can occur, it is when nutrients have a possibility of being washed away due to the extreme moistness.</li>
+            <li>You can prevent this by integrating/improving drainage systems, using products like the French drain improve and build efficiency drastically.</li>
+            <li>Usually anything between 30% to 60%, however, some plants like desert cacti prefer 10% to 40%, but this range should keep your crops away from trouble.</li>
+            <li>Regularly checking moisture levels also helps notify when you should take action, we recommend using the Soil Moisture Meter by Dr.meter.</li>
+          </ul>
+
+          <h2>#3 Low quality environment 🍄</h2>
+          <ul>
+            <li>A bad environment can cause stunt growth, poor nutrient absorption, disease development, algal blooms etc.</li>
+            <li>A good way to avoid this is by planting cover crops, which are crops made to increase environmental health and are placed between cash crops or after harvest to protect and enhance them. Some examples of these crops are legumes, grasses, brassicas and many more.</li>
+            <li>Regular soil testing can help identify nutrient deficiencies and pH issues, allowing for appropriate amendments.</li>
+            <li>Incorporate compost, worm castings, or peat moss to improve soil structure and provide nutrients, you can find nutrients and items for your compost anywhere, like dead leaves, banana peels or even egg shells.</li>
+          </ul>
+
         </div>
       </section>
         <section class="plant-selection">
@@ -223,6 +251,8 @@
           <div class = "notes-container">
           </div>
         </div>
+
+        <h1><strong>Thank you for visiting our Website 🙏</strong></h1>
   </main>
   <footer>
     <p>Powered by <strong>HTML, CSS, and JavaScript</strong> | Developed by <strong>Rowaid Maddah</strong> Group 3 (10Q)</p>
@@ -230,3 +260,4 @@
   <script src="app.js" defer></script>
 </body>
 </html>
+
