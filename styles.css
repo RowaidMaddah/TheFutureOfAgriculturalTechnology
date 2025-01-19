@@ -108,6 +108,9 @@ body {
     align-items: flex;
   }
   
+  .city {
+    display: none;
+    }
   
   canvas {
     width: 100%;
@@ -201,76 +204,6 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
   }
-  
-  
-    .details {
-      background-color: #27a162; /* Green background matching the theme */
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow to make it stand out */
-      width: 40%; /* Adjust width to give it space */
-      margin: 20px 0;
-      animation: fadeIn 2.5s ease-in-out;
-      text-align: left;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-   
-   
-    .details-title {
-      font-size: 1.8em; /* Larger font size for the title */
-      color: #e5e5e5;
-      font-weight: bold;
-      margin-bottom: 20px; /* More space below the title */
-      text-align: center; /* Center the title */
-      letter-spacing: 2px; /* Add letter-spacing to make the title feel more polished */
-    }
-   
-  
-    #weatherDetails ul {
-      list-style-type: none; /* Remove default bullet points */
-      padding-left: 0;
-      font-size: 1.1em; /* Slightly larger font for better readability */
-      margin: 0;
-    }
-   
-  
-    #weatherDetails li {
-      margin: 12px 0; /* More space between items */
-      color: #e5e5e5;
-      line-height: 1.6; /* Add line height for better spacing between text */
-    }
-   
-  
-    #weatherDetails li strong {
-      font-weight: bold;
-      color: #e5e5e5;
-    }
-   
-   
-    /* Add some padding and alignment for the whole list */
-    #weatherDetails ul {
-      padding-left: 15px;
-    }
-   
-  
-    .details ul li {
-      text-align: left; /* Align text to the left */
-      padding: 15px; /* Add padding to give a neat look */
-      border: 1px solid;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin: 10px 0; /* Ensure there is a consistent margin */
-      color: #e5e5e5;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-    }
-  
-  
-    .details ul li:hover{
-      transform: translateY(-10px);
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    }
-  
    
     /* Responsive styling for smaller screens */
     @media (max-width: 768px) {
@@ -308,6 +241,26 @@ body {
       margin-bottom: 20px;
       color: #e5e5e5;
       text-align: center;
+    }
+  
+    .details{
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      max-width: 1200px;
+      margin: 40px auto;
+      animation: fadeIn 3s ease-in-outl;
+      text-align: left;
+    }
+  
+  
+    .details h1{
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #e5e5e5;
+      text-align: center;
+      text-decoration: underline;
     }
   
   
@@ -493,4 +446,52 @@ body {
   form input.yeah{
     color: #2acd73;
   }
+  
+  
+  
+  
+  .hello{
+    width: 90%;
+    max-width: 470px;
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+  }
+  
+  .search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+  }
+  
+  .search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height:60px;
+    cursor: pointer;
+  }
+  
+  .search button img{
+    width: 16px;
+  }
+  
   
