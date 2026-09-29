@@ -55,7 +55,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     max-width: 1200px;
     margin: 40px auto;
-    animation: fadeIn 3s ease-in-outl;
+    animation: fadeIn 3s ease-in-out;
     text-align: center;
   }
   
@@ -231,7 +231,7 @@ body {
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       max-width: 1200px;
       margin: 40px auto;
-      animation: fadeIn 3s ease-in-outl;
+      animation: fadeIn 3s ease-in-out;
       text-align: left;
     }
   
