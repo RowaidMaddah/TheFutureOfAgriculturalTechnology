@@ -8,9 +8,19 @@ body {
     overflow-x: hidden;
   }
 
- div {
- background-image: linear-gradient(green, yellow);
- }
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  
+  /* Linear gradient background from dark green to forest green */
+  background: linear-gradient(135deg, #0d2818 0%, #1f4e38 50%, #27a162 100%);
+  background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+  
+  color: #e5e5e5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
   
   header {
     text-align: center;
