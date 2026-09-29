@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchWeatherData(city) {
             // Check if the city is undefined or empty and set a default value
     if (!city || city.trim() === "") {
-        city = 'Riyadh'; // Set your preferred default city
+        city = 'Jeddah'; // Set your preferred default city
     }
       try {
         const response = await fetch(`${apiUrl}&q=${city}&appid=${apiKey}`);
