@@ -23,10 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let precipitationData = [];
   
     async function fetchWeatherData(city) {
-            // Check if the city is undefined or empty and set a default value
-    if (!city || city.trim() === "") {
-        city = 'Jeddah'; // Set your preferred default city
+        if (city && city.trim() !== "") {
+            currentCity = city.trim();
+        } else {
+            city = currentCity;
+        }
     }
+
+        
       try {
         const response = await fetch(`${apiUrl}&q=${city}&appid=${apiKey}`);
         var data = await response.json();
@@ -80,12 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function handleSoilChange(event) {
       soilType = event.target.value;
-      evaluatePlantChoice(temp, humidity, weatherCondition); // Pass current weather data
+      evaluatePlantChoice(temp, humidity, weatherCondition); 
     }
   
     function handlePlantSelection(event) {
       selectedPlant = event.target.value;
-      evaluatePlantChoice(temp, humidity, weatherCondition); // Pass current weather data
+      evaluatePlantChoice(temp, humidity, weatherCondition); 
     }
   
     function evaluatePlantChoice(temperature, humidity, weatherCondition) {
@@ -101,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       if (soilType === 'Loam') {
         if (roundedTemp >= 20 && roundedTemp <= 30) {
-          // Plant recommendations based on Loamy soil and temperature
+          //This took wayyyyy too long 🤣
           if (selectedPlant === "Corn") {
             recommendationMessage = 'Great choice! Corn grows well in Loamy soil and warm temperatures.';
           } else if (selectedPlant === 'Wheat') {
@@ -304,7 +308,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const seconds = String(now.getSeconds()).padStart(2, '0');
       return `${hours}:${minutes}:${seconds}`;
     }
-  
+
+    //STRAIGHT off of youtube
     function updateChart(context, label, data, labels) {
       if (!context.chart) {
         context.chart = new Chart(context, {
@@ -355,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
   
-    // Update every 12 seconds
+    // Update every 12 SECONDS
     setInterval(fetchWeatherData, 12000);
   
     document.querySelector('.dropdown-button').addEventListener('click', function() {
@@ -363,50 +368,44 @@ document.addEventListener("DOMContentLoaded", () => {
       const content2 = document.querySelector('.content2')
       const button = document.querySelector('.dropdown-button');
   
-      // Toggle visibility of the content
       content.classList.toggle('show');
   
-      // Change button text based on the state of the content
       if (content.classList.contains('show')) {
-        button.textContent = '↑'; // Change to "up" arrow when content is shown
+        button.textContent = '↑';
       } else {
-        button.textContent = '↓'; // Change back to "down" arrow when content is hidden
+        button.textContent = '↓';
       }
     });
   });
-  
+
+//Straight from youtube again too
   const notesContainer = document.querySelector(".notes-container");
   const createBtn = document.querySelector(".btn");
   
   // Function to create a new note
   createBtn.addEventListener("click", () => {
-    // Create a new paragraph element for the input box
+  
     let inputBox = document.createElement("p");
     inputBox.className = "input-box";
     inputBox.setAttribute("contenteditable", "true");
   
-    // Create the delete icon image
     let img = document.createElement("img");
-    img.src = "C:\\Users\\mmadd\\OneDrive\\Pictures\\delete.png"; // Use a valid image source
+    img.src = "C:\\Users\\mmadd\\OneDrive\\Pictures\\delete.png"; 
     img.alt = "Delete Note";
-    img.style.cursor = "pointer"; // Suggest to the user that this element is clickable
+    img.style.cursor = "pointer"; 
   
-    // Append the image to the inputBox
     inputBox.appendChild(img);
-  
-    // Append the inputBox to the notesContainer
     notesContainer.appendChild(inputBox);
   
-    // Focus on the newly created input box
+ 
     inputBox.focus();
   });
-  
-  // Handle click event on notesContainer for delete icon
+
   notesContainer.addEventListener("click", function(e) {
     if (e.target.tagName === "IMG") {
-      // Check if the clicked element is an image (delete button)
-      const noteToDelete = e.target.parentElement; // Get the parent <p> element
-      notesContainer.removeChild(noteToDelete); // Remove the entire note
+     
+      const noteToDelete = e.target.parentElement; 
+      notesContainer.removeChild(noteToDelete); 
     }
   });
   
@@ -418,9 +417,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  fetchWeatherData(city); // Set default city
+  fetchWeatherData(currentCity);
 
-    // Update every 12 seconds using the city from the search box or default to 'London'
     setInterval(() => {
-        fetchWeatherData(searchBox.value); 
+        fetchWeatherData(currentCity); 
     }, 12000);
